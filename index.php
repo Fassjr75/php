@@ -1,7 +1,8 @@
 <?php 
+
 	echo "Uma terceira alteração remota.";
 	echo "Olá camarada!";
 
 
 
-	echo "Acrescenti qualquer outra coisa localmente"
+	echo "Uma terceira linha e retirei uma outra feita remotamente (resolvi um conflito)";
