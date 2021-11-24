@@ -1,5 +1,3 @@
 <?php 
-
-	echo "Aprendendo a usar o GIT - E agora fiz uma alteração nele";
-
-	
+	echo "Uma terceira alteração remota.";
+	echo "Olá camarada!";
