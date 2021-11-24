@@ -1,0 +1,125 @@
+CRIAR DIRETÓRIO:
+
+C:\Users\Fassj\Desktop\Projeto\php\>
+
+-> git init
+
+C:\Users\Fassj\Desktop\Projeto\php\>git init
+
+CONFERIR SE TUDO DEU CERTO APÓS A INSTALAÇÃO DO GIT
+
+-> dir .git (diretório oculto do git)
+
+C:\Users\Fassj\Desktop\Projeto\php\>dir .git
+
+CRIAR UM ARQUIVO PHP OU OUTRO QUALQUER
+
+======================== // ========================
+STAGING AREA E COMMIT
+======================== // ========================
+
+STAGING AREA (fila de espera de objetos a serem CONFIRMADOS com o COMMIT e enviados para o servidor com PUSH)
+
+ADICIONANDO O ARQUIVO CRIADO À STAGING AREA
+
+-> git add nomeArquivo.ext (um por vez)
+-> git add --all (todos os objetos de uma vez)
+
+C:\Users\Fassj\Desktop\Projeto\php\>git add nomeArquivo.ext
+
+CONFIRMANDO ALTERAÇÕES DOS ARQUIVOS (ANEXANDO NOME, E-MAIL E MENSAGEM) - COMMIG
+
+-> git commit -m "Mensagem que será anexada ao envio para o repositório"
+-> git commit -m palavraQualquer (Se se tratar de uma única palavra)
+
+======================== // ========================
+DOIS GRANDES REPOSITÓRIOS - GITHUB e BITBUCKET
+======================== // ========================
+
+GITHUB.COM 	- Rede social para desenvolvedores, sem limitação para times desde que o código seja aberto, exibe percentual de tecnologias usadas, calendário de alterações do projeto, colaboração em projetos ou PULL-REQUEST, os projetos são de CÓDIGO ABERTO - open source, tem um modo privado para repositários privados etc.)
+
+BITBUCKET.ORG 	- Repositórios gratuito para times com até 5 desenvolvedores, 
+
+======================== // ========================
+
+ADICIONANDO NOME DO USUÁRIO E E-MAIL (o MESMO do github) - PRIMEIRO (só precisa fazer UMA ÚNICA VEZ ao instalar o GIT)
+
+-> git config --global user.name "nome usuário"
+-> git config --global user.email "email usuário"
+
+C:\Users\Fassj\Desktop\Projeto\php\>git config --global user.name "Francisco Jr"
+C:\Users\Fassj\Desktop\Projeto\php\>git config --global user.name "fassjr75@gmail.com"
+
+*Sem o --global, o projeto tem outra finalidade, basta tirar o --global do comando e informar outro e-mail
+
+CLONANDO REPOSITÓRIO - DEPOIS
+
+->git remote add origin ENDEREÇO.GIT (adicionar o endereço de origem de um repositório remoto ao nosso projeto local - copiar em CLONAR no site)
+
+C:\Users\Fassj\Desktop\Projeto\php\>git remote add origin https://github.com/Fassjr75/php.git
+
+======================== // ========================
+EMPURRANDO AS INFORMAÇÕES PARA O SERVIDOR - PUSH
+======================== // ========================
+
+-> git push origin master (atualizar o nosso repositório remoto com as mudanças locais, tudo padrão, mas, pode alterado)
+
+*Este comando vai pedir confirmação de e-mail e senha
+
+C:\Users\Fassj\Desktop\Projeto\php\>git push origin master
+
+Depois é só atualizar a página do githum e ir no branche MASTER onde os objetos estarão.
+
+BOAS PRÁTICAS NO GITHUB
+
+README - Importante criar sempre para orientar as pessoas sobre o que é o projeto
+-RAW exibe o código puro do arquivo
+
+REVISÃO IMPORTANTE
+
+** Cria repositório local
+Adiciona um arquivo nele
+Atualiza esse arquivo no repositório remoto
+
+SÉRIE QUE ATENDE ESSA NECESSIDADE:
+
+1 - git init
+2 - git remote add origin url-repositorio.git
+3 - git add --all
+4 - git commit -m 'mensagem de envio'
+5 - git push origin master
+
+======================== // ========================
+TRAZENDO AS ATUALIZAÇÕES REMOTAS PARA A PASTA LOCAL (pode gerar conflitos)
+======================== // ========================
+
+-> git pull origin master (origin DE ONDE VEM, master PARA ONDE VAI)
+
+Fazendo um MERGE ou mesmo MESCLAR informações conflituosas (duas pessoal alteraram ao mesmo tempo)
+
+1 - Atualizando primeiro no repositório do github (o index.php)
+2 - Preencher o campo de mensagem online
+3 - Fazer o COMMIT CHANGE (remotamente)
+4 - Trazer para a pasta local: git pull origin master
+
+*Se houve alterações localmente e remotamente no repositório, antes de enviar as locais é importante fazer um PULL (git pull origin master) ou seja, trazer as alterações remotas. Do contrário, haverá conflito e o PUSH (envio) não será possível.
+
+*Ao dar um PULL o github traz o arquivo com todas as alterações, e é preciso editá-lo para escolher as que devem permanecer, daí, reenviar para o servidor remoto com PUSH.
+
+RESOLVENDO O CONFLITO ACIMA
+
+1 - Trazer o arquivo para a pasta local (git pull origin master)
+2 - Alterar o arquivo no editor 
+3git  - Enviar o arquivo já alterado para o servidor remoto
+	git add --all
+	git commit -m "Resolvi os conflitos existentes"
+	git push origin master (pode pedir credenciais novamente se não foi feito via browser)
+
+
+
+
+Qual comando usamos para adicionar o endereço de origem de um repositório remoto ao nosso projeto local?
+O comando que usamos para atualizar o nosso repositório remoto com as mudanças locais é o...
+Precisamos criar um repositório local, adicionar um arquivo nele e atualizar esse arquivo em nosso repositório r
+
+
